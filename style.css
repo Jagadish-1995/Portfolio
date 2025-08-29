@@ -23,15 +23,31 @@ html {
 }
 
 body {
-    background: var(--bg-color);
+    background: linear-gradient(-45deg, #020235, #323946, #0a0a3a, #001f4d);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
     color: var(--text-color);
     overflow-x: hidden;
+}
+
+/* Animated background for sections with second-bg-color */
+.about,
+.portfolio,
+.footer {
+    background: linear-gradient(-45deg, #323946, #020235, #0a0a3a, #001f4d);
+    background-size: 400% 400%;
+    animation: gradientBG 20s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 section {
     min-height: 100vh;
     padding: 10rem 9% 2rem;
-
 }
 
 .header {
@@ -96,14 +112,12 @@ section {
     100%{
         transform: translateY(0);
     }
-
 }
 
 .home-content h3 {
     font-size: 3.2rem;
     font-weight: 700;
 }
-
 
 .home-content h3:nth-of-type(2) {
     margin-bottom: 2rem;
@@ -168,14 +182,13 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem; /* space between image & text */
-    background: var(--second-bg-color);
-    padding: 5rem 9%; /* top/bottom & sides padding */
+    gap: 2rem;
+    padding: 5rem 9%;
 }
 
 .about-img {
-    flex: 0 0 auto; /* prevent shrinking */
-    width: 500px; /* control image size */
+    flex: 0 0 auto;
+    width: 500px;
 }
 
 .about-img img {
@@ -204,6 +217,11 @@ span {
     margin: 2rem 0 3rem;
 }
 
+#about-more {
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
 .services h2 {
     margin-bottom: 5rem;
 }
@@ -217,7 +235,7 @@ span {
 }
 
 .services-container .services-box {
-    flex: 1 1 30rem; /* flexible width */
+    flex: 1 1 30rem;
     background: var(--second-bg-color);
     padding: 3rem 2rem 4rem;
     border-radius: 2rem;
@@ -246,10 +264,6 @@ span {
     font-size: 1.6rem;
     margin-bottom: 2rem;
 }   
-
-.portfolio {
-    background: var(--second-bg-color);
-}
 
 .portfolio h2 {
     margin-bottom: 4rem;
@@ -298,7 +312,6 @@ span {
 
 .portfolio-box:hover .portfolio-layer{
     transform: translateY(0);
-
 }
 
 .portfolio-layer h3 {
@@ -325,7 +338,7 @@ span {
     color: var(--second-bg-color);
 }
 
-.cotact h2 {
+.contact h2 {
     margin-bottom: 3rem;
 }
 
@@ -353,7 +366,6 @@ span {
     margin: .7rem 0;
 }
 
-
 .contact form .input-box input {
     width: 49%;
 }
@@ -373,14 +385,12 @@ span {
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem 9%;
-    background: var(--second-bg-color);
 }
 
 .footer-text p {
     color: var(--text-color);
     font-size: 1.6rem;
 }
-
 
 .footer-iconTop a {
     display: inline-flex;
@@ -395,7 +405,6 @@ span {
 .footer-iconTop a:hover {
     background: var(--text-color);
     box-shadow: 0 0 2rem var(--main-color);
-
 }
 
 .footer-iconTop a i {
@@ -413,28 +422,22 @@ span {
   }
 }
 
-
 @media (max-width: 991px){
     .header{
         padding: 2rem 3%;
     }
-
     section {
         padding: 10rem 3% 2rem;
     }
-
     .services {
         padding: 7rem;
     }
-
     .portfolio {
         padding-bottom: 7rem ;
     } 
-    
     .contact {
         min-height: auto;
     }
-
     .footer{
         padding: 2rem 3%;
     }
@@ -444,7 +447,6 @@ span {
     #menu-icon {
         display: block;
     }
-
     .navbar {
         position: absolute;
         top: 100%;
@@ -456,48 +458,38 @@ span {
         box-shadow: 0 .5rem 1rem rgba(0,0,0, .2);
         display: none;
     }
-
     .navbar.active {
         display: block;
     }
-
     .navbar a {
         display: block;
         font-size: 2rem;
         margin: 3rem 0;
     }
-
     .home {
         flex-direction: column;
     }
-
     .home-content h1 {
         font-size: 5rem;
     }
-
     .home-image img {
         width: 70vw;
         margin-top: 4rem;
     }
-
     .about {
         flex-direction: column-reverse;
     }
-
     .about img {
         justify-content: center;
         width: 70vw;
         margin-top: 20px;
     }
-
     .services h2 {
         margin-bottom: 3rem;
     }
-
     .portfolio h2 {
         margin-bottom: 3rem;
     }
-
     .portfolio-container {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -513,7 +505,6 @@ span {
     html{
       font-size: 50%;   
     }
-
     .contact form .input-box input {
         width: 100%;
     }
@@ -526,7 +517,6 @@ span {
     .about-img img {
         width: 90vw;
     }
-
     .footer {
         flex-direction: column-reverse;
     }
@@ -537,6 +527,21 @@ span {
 }
 
 html {
-  scroll-behavior: smooth;      /* smooth scroll */
-  scroll-padding-top: 80px;     /* same height as your navbar */
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
+
+/* Background Canvas */
+#network-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* stays behind portfolio content */
+    background: black; /* fallback color */
+}
+
+
+
+
