@@ -62,3 +62,17 @@ const typed = new Typed('.multiple-text', {
     backDelay: 1000,
     loop: true
 });
+
+/*=================== Form submission ==================*/
+document.getElementById("contactForm").addEventListener("load", function() {
+    let iframe = document.getElementById("contactForm");
+    let iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+    if (iframeDoc.body.innerText.includes("Your response has been recorded")) {
+        let popup = document.getElementById("popupMessage");
+        popup.style.display = "block";
+        setTimeout(() => {
+            popup.style.display = "none";
+        }, 3000);
+    }
+});

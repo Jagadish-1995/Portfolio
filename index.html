@@ -43,7 +43,7 @@
                 <a href="#"><i class='bx bxl-github'></i></a>
                 <a href="#"><i class='bx bxl-instagram-alt'></i></a>
             </div>
-            <a href="#" class="btn">Download CV</a>
+            <a href="./Jagadish CV Latest.pdf" class="btn">Download CV</a>
         </div>
 
         <div class="home-image">
@@ -172,24 +172,26 @@
 
     </section>
 
-    <!--Contact Section Design-->
+    <!-- Contact Section Design -->
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span> Me! </span> </h2>
 
-        <form action="#">
-            <div class="input-box">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-            </div>
-            <div class="input-box">
-                <input type="number" placeholder="Mobile Number" required>
-                <input type="text" placeholder="Email Subject" required>
-            </div>
-            <textarea name="" id="" cols="30" rows="" placeholder="Your Message" required></textarea>
-            <input type="submit" value="Send Message" class="btn">
-        </form>
+        <div class="input-box" style="display: flex; justify-content: center;">
+            <!-- Google Form Embed -->
+            <iframe id="contactForm"
+                src="https://docs.google.com/forms/d/e/1FAIpQLSc185rppRnNpr2QaWzkgVfEgSrBSFH1_mS1Gx-F8wkEGmPthw/viewform?usp=sharing&ouid=114915205981221945712"
+                width="60%" height="753" frameborder="0" marginheight="0" marginwidth="0">
+                Loading…
+            </iframe>
+        </div>
 
+        <!-- Popup Message -->
+        <div id="popupMessage"
+            style="display:none; position:fixed; top:20px; right:20px; background:#4CAF50; color:white; padding:10px 20px; border-radius:5px; z-index:999;">
+            ✅ Thank you! I’ll get back to you shortly.
+        </div>
     </section>
+
 
     <!--footer design-->
     <footer class="footer">

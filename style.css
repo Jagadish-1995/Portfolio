@@ -25,6 +25,7 @@ html {
 body {
     background: var(--bg-color);
     color: var(--text-color);
+    overflow-x: hidden;
 }
 
 section {
@@ -85,7 +86,7 @@ section {
     animation: floatImage 4s ease-in-out infinite;
 }
 
-@keyframes floatimage{
+@keyframes floatImage{
     0%{
         transform: translateY(0);
     }
@@ -174,7 +175,7 @@ span {
 
 .about-img {
     flex: 0 0 auto; /* prevent shrinking */
-    width: 700px; /* control image size */
+    width: 500px; /* control image size */
 }
 
 .about-img img {
@@ -407,6 +408,9 @@ span {
     html{
         font-size: 55%;
     }
+    .about {
+    padding: 5rem 5%;
+  }
 }
 
 
@@ -416,7 +420,7 @@ span {
     }
 
     section {
-        padding: 10rem 3% 2 rem;
+        padding: 10rem 3% 2rem;
     }
 
     .services {
@@ -481,8 +485,9 @@ span {
     }
 
     .about img {
+        justify-content: center;
         width: 70vw;
-        margin-top: 4rem;
+        margin-top: 20px;
     }
 
     .services h2 {
